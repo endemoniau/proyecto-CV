@@ -22,11 +22,8 @@ for (i = 0; i < acc.length; i++) {
 
     for (i = 0; i < acc.length; i++){
         console.log(acc[i].nextElementSibling); 
-        acc[i].style.color="#000000"; 
         acc[i].style.display="";            
     }
-
-    this.style.color="#000000";
     this.style.display="block";
 
     if (panel.style.display === "block") {
