@@ -1,35 +1,38 @@
-function myFunction() {
-    let x = document.getElementById("barratop");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-
 let acc = document.getElementsByClassName("accordion");
+let navb = document.getElementById("bottomnav");
 let i;
 
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    console.clear();
+const resizeObserver = new ResizeObserver(entries => {
+  let resizeScreen=entries[0].target.clientHeight
+  if (resizeScreen > 700) {
+    navb.style.display="block";
+  } else {
+    navb.style.display="none";
+  }
+})
 
-    this.classList.toggle("active");
+resizeObserver.observe(document.body)
 
-    let panel = this.nextElementSibling;
-    let panel2 =this.previousElementSibling;
-
-    for (i = 0; i < acc.length; i++){
-        console.log(acc[i].nextElementSibling); 
-        acc[i].style.display="";            
-    }
-    this.style.display="block";
-
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
+function abrirmenu() {
+  let x = document.getElementById("barratop");
+  if (x.className === "topnav") {
+      x.className += " responsive";
+  } else {
+      x.className = "topnav";
+  }
 }
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("focus", function() {
+    this.classList.toggle("active");   
+    let panel = this.nextElementSibling;
+    if(panel.style.display==="block"){
+      panel.style.display="none";
+    } 
+    else {
+        panel.style.display="block";
+    }
+    this.blur();
+  });
+} 

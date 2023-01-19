@@ -36,8 +36,17 @@ h4{
 }
 
 ul, li, a, p, h4{
-  padding: 10px 0px;
+  padding: 10px 5px;
   background-color: #BF9169;
+}
+
+button{
+  border-width: 1px;
+  border-color: #202020;
+  background-color: #BF9169;
+  color: #202020;
+  font-weight: bold;
+  margin: 0 10%;
 }
 
 .topnav {
@@ -48,37 +57,34 @@ ul, li, a, p, h4{
   width: 100%;
   }
  
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 14px;
-    text-decoration: none;
-    font-size: 14px;
-    background-color: #025949;
-    display: block;
-  }
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  font-size: 14px;
+  background-color: #025949;
+}
   
-  .topnav a:hover {
-    background-color: #D9AA8F;
-    color: black;
-  }
-  
-  .topnav a.active {
-    background-color: #c0ba81;
-    color: white;
-  }
+.topnav a:hover {
+  background-color: #D9AA8F;
+  color: black;
+}
 
-  .topnav .icon {
-    display: none;
-    float: left;
-    background-color: #025949;
-  }
+.topnav a.active {
+  background-color: #c0ba81;
+  color: white;
+}
+
+.topnav .icon {
+  display:none;
+  background-color: #025949;
+}
 
 .accordion  {
   background-color: #D9AA8F;
   font-weight: bold;
-  /*background-color: #BF9169;*/
   color: #404040;
   cursor: pointer;
   padding: 18px;
@@ -99,55 +105,28 @@ ul, li, a, p, h4{
   padding: 5px;
 }
 
-
-
 .active, .accordion:hover  {
-  /*background-color: #D9AA8F*/
   background-color: #BF9169;
 }
-
-
 
 .panel {
   padding: 0 18px;
   margin: 0 10%;
   font-size: 14px;
- /* background-color: #D9AA8F;*/
   background-color: #BF9169;
   display: none;
   overflow: hidden;
 }
-.mailform{
-  width: 80%;
-  align-content: center;
-  margin: 0 10%;
-}
 
-.mailform p , .mailform input, .mailform button, .mailform textarea{
-  background-color: #735634;
-  font-size: 12px;
-  color: #f2f2f2;
-  margin: 0 10%;
-  border: #BF9169;
-  border-width: 10px;
-}
-
-.mailform input{
-  background-color: #BF9169;
-}
-
-.mailform textarea{
-  background-color: #BF9169;
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 745px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     display:block;
+    float: right;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 745px) {
 
   .picprofile {width: 35%; margin-top: 10%;}
   .center {font-size: 160%;}
@@ -156,7 +135,7 @@ ul, li, a, p, h4{
   .topnav.responsive .icon {
     
     position:absolute;
-    left: 0;
+    right: 0;
     top: 0;
   
   }
