@@ -17,4 +17,4 @@ Realizado en Visual Studio Code utilizando:
 - Font Awesome
 - Se incluye el uso de metadata Open Graph y Media Queries para adaptar la visualizacion tanto en mobile como desktop.
 
-#### http://www.elendemo.com.ar/cv/
+#### https://endemoniau.github.io/proyecto-CV/
